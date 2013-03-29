@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>img{ height: 100px; float: left; }</style>
-<script src="//mhrnjak.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
-<script src="phonegap.js"></script>
-<title>An JSONP example from w3resource</title>
-</head>
-<body>
-<div id="images">
-</div>
-<script type="text/javascript">
-var client = new WindowsAzure.MobileServiceClient(
-    "https://mhrnjak.azure-mobile.net/",
-    "wGLKtDRvSmCCnPzKKnduNEpNNOdmaD78"
-);
-var item = { text: "Awesome item" };
-client.getTable("Item").insert(item);</script>
+    <head>
+        <title>Todo list: mhrnjak</title>
+        <link rel='stylesheet' href='styles.css' />
+		<script src="phonegap.js"></script>
+        <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
+    </head>
+    <body>
+        <div id='wrapper'>
+            <article>
+                <header>
+                    <h2>Windows Azure</h2>
+                    <h1>Mobile Services</h1>
 
-aaaa
-</body>
+                    <form id='add-item'>
+                        <button type='submit'>Add</button>
+                        <div><input type='text' id='new-item-text' placeholder='Enter new task' /></div>
+                    </form>
+                </header>
+
+                <ul id='todo-items'></ul>
+                <p id='summary'>Loading...</p>
+            </article>
+
+            <footer>
+                <a href='http://www.windowsazure.com/en-us/develop/mobile/'>
+                    Learn more about Windows Azure Mobile Services
+                </a>
+            </footer>
+        </div>
+
+        <script src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js'></script>
+        <script src='https://mhrnjak.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js'></script>
+        <script src='app.js'></script>
+    </body>
+
+
 </html>
