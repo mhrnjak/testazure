@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>img{ height: 100px; float: left; }</style>
+<script src="//mhrnjak.azure-mobile.net/client/MobileServices.Web-1.0.0.min.js"></script>
+<script src="phonegap.js"></script>
+<title>An JSONP example from w3resource</title>
+</head>
+<body>
+<div id="images">
+</div>
+<script type="text/javascript">
+var client = new WindowsAzure.MobileServiceClient(
+    "https://mhrnjak.azure-mobile.net/",
+    "wGLKtDRvSmCCnPzKKnduNEpNNOdmaD78"
+);
+var item = { text: "Awesome item" };
+client.getTable("Item").insert(item);</script>
+
+aaaa
+</body>
+</html>
